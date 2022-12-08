@@ -6,7 +6,7 @@ int nadji_podniz(int kolona_matrice[], int pod_niz[], int redovi, int duzina_pod
 	//Radi potpuno isto kao funkcija broj_ponavljanja
 	for (int i = 0; i < redovi; i++) {
 		ima_podniz = 0;
-		for (int j = i, n = 0; j < i + duzina_podniza && n < duzina_podniza; j++, n++) {
+		for (int j = i, n = 0; j < i + duzina_podniza; j++, n++) {
 			if (kolona_matrice[j] == pod_niz[n]) {
 				index = i;
 				ima_podniz += 1;
@@ -42,7 +42,7 @@ int broj_ponavljanja(int matrica[50][50] , int pod_niz[], int niz_br_ponavljanja
 				ima_podniz = 0;
 				/*Index J krece uvek od m, znaci prvo ce biti nula i proverice da li su elementi od J do M + duzina_podniza isti kao u pod_niz(kad je m == 1 i J ce biti)
 				index n ce uvek kretati od 0 i kretati se do same duzine podniza i taj index koristi pod_niz*/
-				for (int j = m, n = 0; j < m + duzina_podniza && n < duzina_podniza; j++, n++) {
+				for (int j = m, n = 0; j < m + duzina_podniza; j++, n++) {
 					if (kolona_matrice[j] == pod_niz[n]) {
 						/*Za svaki nadjeni isti element povecacemo ima_podniz za jedan, ako je ta varijabla
 						jednaka varijabli duzina_podniza znaci samo da se u nizu od m-te pozicije do m+duzina_podniza nalazi sam pod_niz i da su svi el. isti*/
